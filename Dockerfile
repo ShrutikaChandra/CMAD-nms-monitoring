@@ -1,9 +1,9 @@
-FROM node:4-alpine
+FROM node:8
 
 
 WORKDIR /opt/nms-monitoring
 
-COPY . /opt/nms-monitoring
+COPY . ./
 
 RUN npm install
 
