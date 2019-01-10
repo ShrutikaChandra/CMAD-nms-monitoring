@@ -1,32 +1,63 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.app {
+    display: block;
+    position: relative;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .split {
+    display: flex; 
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-left: 10px;
+    margin-right: 10px;
   }
-}
+  
+  .purpleHilite {
+    color: #663399;
+  }
+  
+  .tableContainer {
+    display: block;
+    position: relative;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0px;
+    margin-left: 0px;
+    padding: 0px;
+    padding-left: 5px;
+  }
+  
+  li {
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  .react-redux-grid-active, .react-redux-grid-inactive {
+    margin: 5px;
+    border-radius: 5px;
+    background-color: #49b8dc;
+  }
+  
+  .react-redux-grid-active {
+    color: white;
+    background-color: #644581;
+  }
+  
+  .gridH2 {
+    font-family: 'Bree Serif', serif;
+    font-size: 18px;
+    color: #49b8dc;
+    font-weight: normal;
+    margin: 0px;
+    margin-bottom: 10px;
+    padding: 0px;
+    margin-top: 10px;
+  }
+  
+  
+  
+  :focus {
+    border: none;
+    outline: none;
+  };

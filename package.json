@@ -3,12 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@types/react-data-grid": "^4.0.1",
+    "prop-types": "^15.5.7",
     "react": "^16.7.0",
+    "react-data-grid": "^5.0.5",
+    "react-data-grid-addons": "^5.0.5",
     "react-dom": "^16.7.0",
+    "react-easy-chart": "^1.0.0",
+    "react-redux-grid": "^5.6.1",
     "react-scripts": "2.1.2"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "PORT=3006 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
