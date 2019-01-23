@@ -1,7 +1,7 @@
 import store from '../stores/store.js';
 
 export function fetchLogsForGrid() {
-    return fetch('../sampleData/logs.json')
+    return fetch('http://localhost:8083/nmslog/')
         .then(function (response) {
             console.log(response);
             return response.json();
@@ -16,13 +16,31 @@ export function fetchLogsForGrid() {
 };
 
 export function fetchCount() {
-    return fetch('../sampleData/count.json').then(function (response) {
+    return fetch('http://localhost:8083/nmslog/count/').then(function (response) {
         return response.json();
     }).then(function (countData) {
+        console.log(countData);
+        const formattedData = [];
+        formattedData.push({
+            key : "error",
+            value : countData.errorCount
+        })
+        formattedData.push({
+            key : "warning",
+            value : countData.warnCount
+        })
+        formattedData.push({
+            key : "info",
+            value : countData.infoCount
+        })
+        formattedData.push({
+            key : "debug",
+            value : countData.debugCount
+        })
         store.dispatch({
             type: 'dashboard',
-            count: countData
+            count: formattedData
         });
-        console.log("count in ajax", countData);
+        console.log("count in ajax", formattedData);
     });
 };
